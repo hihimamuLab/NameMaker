@@ -79,8 +79,6 @@ while True:
     event, values = window.read()
     if event == "-submit-":
         window["-output-"].update("")
-        name_random = rd.randint(0,int(len(names)))
-        alphabet_random = rd.randint(0,int(len(alphabet)))
         name = rd.choice(alphabet) + rd.choice(names)
         print(name)
     if event== sg.WIN_CLOSED:
