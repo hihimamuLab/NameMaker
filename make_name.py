@@ -21,7 +21,7 @@ names = [
     "馬場", "矢野", "内田", "鶴田", "梅田",
     "小笠原", "松井", "島田", "大西", "福井",
     "沢田", "加藤", "今井", "矢田", "亀田",
-    "筒井", "酒井", "西川"
+    "筒井", "酒井", "西川","和田"
 ]
 
 alphabet = [
@@ -40,7 +40,7 @@ alphabet = [
 "デジタルストラテジー","プロダクトマーケティング","モバイルマーケティング","アフィリエイトマーケティング","コンテンツマーケティング",
 "メールマーケティング","リテンションマーケティング","カスタマーエクスペリエンス","カスタマーサポート","カスタマーサクセス",
 "カスタマーアドボカシー","リレーションシップマーケティング","コーポレートコミュニケーション","パブリックリレーションズ","インフルエンサーマーケティング",
-"デジタルプロモーション","エキスパートサービス","プロフェッショナルサービ"
+"デジタルプロモーション","エキスパートサービス","プロフェッショナルサービ","アキコ"
 ]
 
 layout =[[sg.Button("実行",key="-submit-",size = (50,3))],
@@ -53,9 +53,7 @@ while True:
     event, values = window.read()
     if event == "-submit-":
         window["-output-"].update("")
-        name_random = rd.randint(0,97)
-        alphabet_random = rd.randint(0,77)
-        name = alphabet[alphabet_random] + names[name_random] 
+        name = rd.choice(alphabet) + rd.choice(names) 
         print(name)
     if event== sg.WIN_CLOSED:
         break
